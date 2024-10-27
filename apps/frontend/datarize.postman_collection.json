@@ -1,0 +1,320 @@
+{
+	"info": {
+		"_postman_id": "0f3baa94-08c9-4337-aef9-c5d0131aa0a0",
+		"name": "Datarize 과제",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2848569"
+	},
+	"item": [
+		{
+			"name": "구매 데이터 가져오기",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/api/purchase-frequency?from=2024-06-30T15:00:00.000Z&to=2024-07-31T15:00:00.000Z",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"purchase-frequency"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "2024-06-30T15:00:00.000Z",
+							"description": "시작 날짜 (ISO 8601 형식)"
+						},
+						{
+							"key": "to",
+							"value": "2024-07-31T15:00:00.000Z",
+							"description": "종료 날짜 (ISO 8601 형식)"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "정상 응답",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/api/purchase-frequency?from=2024-06-30T15:00:00.000Z&to=2024-07-30T15:00:00.000Z",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"purchase-frequency"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "2024-06-30T15:00:00.000Z",
+									"description": "시작 날짜 (ISO 8601 형식)"
+								},
+								{
+									"key": "to",
+									"value": "2024-07-30T15:00:00.000Z",
+									"description": "종료 날짜 (ISO 8601 형식)"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "329"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 27 Oct 2024 04:25:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"range\": \"0 - 20000\",\n        \"count\": 10\n    },\n    {\n        \"range\": \"20001 - 30000\",\n        \"count\": 16\n    },\n    {\n        \"range\": \"30001 - 40000\",\n        \"count\": 44\n    },\n    {\n        \"range\": \"40001 - 50000\",\n        \"count\": 28\n    },\n    {\n        \"range\": \"50001 - 60000\",\n        \"count\": 11\n    },\n    {\n        \"range\": \"60001 - 70000\",\n        \"count\": 17\n    },\n    {\n        \"range\": \"70001 - 80000\",\n        \"count\": 0\n    },\n    {\n        \"range\": \"80001 - 90000\",\n        \"count\": 0\n    },\n    {\n        \"range\": \"90001 - 100000\",\n        \"count\": 13\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "고객 목록 가져오기",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/api/customers",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"customers"
+					],
+					"query": [
+						{
+							"key": "sortBy",
+							"value": "asc",
+							"description": "정렬 기준 (가능한 값: asc, desc - 구매 금액 순 정렬)",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "",
+							"description": "이름 검색",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "정상 응답",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/api/customers",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"customers"
+							],
+							"query": [
+								{
+									"key": "sortBy",
+									"value": "asc",
+									"description": "정렬 기준 (가능한 값: asc, desc - 구매 금액 순 정렬)",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "",
+									"description": "이름 검색",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1193"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 27 Oct 2024 04:24:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"홍길동\",\n        \"count\": 9,\n        \"totalAmount\": 740000\n    },\n    {\n        \"id\": 2,\n        \"name\": \"김영희\",\n        \"count\": 10,\n        \"totalAmount\": 468000\n    },\n    {\n        \"id\": 3,\n        \"name\": \"이철수\",\n        \"count\": 8,\n        \"totalAmount\": 400000\n    },\n    {\n        \"id\": 4,\n        \"name\": \"박지민\",\n        \"count\": 4,\n        \"totalAmount\": 134000\n    },\n    {\n        \"id\": 5,\n        \"name\": \"최민수\",\n        \"count\": 6,\n        \"totalAmount\": 420000\n    },\n    {\n        \"id\": 6,\n        \"name\": \"오준호\",\n        \"count\": 6,\n        \"totalAmount\": 225000\n    },\n    {\n        \"id\": 7,\n        \"name\": \"한지우\",\n        \"count\": 8,\n        \"totalAmount\": 220000\n    },\n    {\n        \"id\": 8,\n        \"name\": \"권상우\",\n        \"count\": 4,\n        \"totalAmount\": 300000\n    },\n    {\n        \"id\": 9,\n        \"name\": \"윤서영\",\n        \"count\": 9,\n        \"totalAmount\": 330000\n    },\n    {\n        \"id\": 10,\n        \"name\": \"이서진\",\n        \"count\": 4,\n        \"totalAmount\": 175000\n    },\n    {\n        \"id\": 11,\n        \"name\": \"김하늘\",\n        \"count\": 6,\n        \"totalAmount\": 400000\n    },\n    {\n        \"id\": 12,\n        \"name\": \"조은비\",\n        \"count\": 8,\n        \"totalAmount\": 289000\n    },\n    {\n        \"id\": 13,\n        \"name\": \"서지영\",\n        \"count\": 5,\n        \"totalAmount\": 220000\n    },\n    {\n        \"id\": 14,\n        \"name\": \"전하늘\",\n        \"count\": 7,\n        \"totalAmount\": 215000\n    },\n    {\n        \"id\": 15,\n        \"name\": \"이상우\",\n        \"count\": 9,\n        \"totalAmount\": 560000\n    },\n    {\n        \"id\": 16,\n        \"name\": \"장민석\",\n        \"count\": 6,\n        \"totalAmount\": 325000\n    },\n    {\n        \"id\": 17,\n        \"name\": \"배윤서\",\n        \"count\": 6,\n        \"totalAmount\": 195000\n    },\n    {\n        \"id\": 18,\n        \"name\": \"강호준\",\n        \"count\": 7,\n        \"totalAmount\": 580000\n    },\n    {\n        \"id\": 19,\n        \"name\": \"문지환\",\n        \"count\": 8,\n        \"totalAmount\": 270000\n    },\n    {\n        \"id\": 20,\n        \"name\": \"송지우\",\n        \"count\": 9,\n        \"totalAmount\": 352000\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "특정 고객의 구매 내역 가져오기",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/api/customers/:id/purchases",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"customers",
+						":id",
+						"purchases"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "정상 응답",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/api/customers/:id/purchases",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"api",
+								"customers",
+								":id",
+								"purchases"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "473"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 27 Oct 2024 04:28:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"date\": \"2024-07-03\",\n        \"quantity\": 4,\n        \"product\": \"코트\",\n        \"price\": 400000,\n        \"imgSrc\": \"http://localhost:4000/imgs/coat.jpg\"\n    },\n    {\n        \"date\": \"2024-07-13\",\n        \"quantity\": 1,\n        \"product\": \"코트\",\n        \"price\": 100000,\n        \"imgSrc\": \"http://localhost:4000/imgs/coat.jpg\"\n    },\n    {\n        \"date\": \"2024-07-20\",\n        \"quantity\": 2,\n        \"product\": \"원피스\",\n        \"price\": 120000,\n        \"imgSrc\": \"http://localhost:4000/imgs/dress.jpg\"\n    },\n    {\n        \"date\": \"2024-07-30\",\n        \"quantity\": 2,\n        \"product\": \"원피스\",\n        \"price\": 120000,\n        \"imgSrc\": \"http://localhost:4000/imgs/dress.jpg\"\n    }\n]"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "API_URL",
+			"value": "http://localhost:4000",
+			"type": "string"
+		}
+	]
+}
