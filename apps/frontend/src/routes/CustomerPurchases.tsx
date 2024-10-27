@@ -31,7 +31,7 @@ function CustomerPurchasesPage() {
   )
 
   const customerPurchasesQuery = useQuery({
-    queryKey: [getCustomerPurchases, customerId],
+    queryKey: ['getCustomerPurchases', customerId],
     queryFn: async () => {
       if (!customerId) {
         return []
